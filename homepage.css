@@ -1,0 +1,211 @@
+@font-face {
+    font-family: "Valorant";
+    src: url(Font/Font.ttf);
+}
+
+body{
+    font-family: "Valorant";
+    background: skyblue;
+
+}
+
+
+
+.all-btns button{
+    font-family: inherit;
+    flex: 1;
+    font-size: 20px;
+    padding: 10px;
+
+    background-color: rgb(0, 0, 0);
+    color: whitesmoke;
+}
+
+.all-btns button:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+
+.all-btns{
+    display: flex;
+
+}
+
+.displayer{
+    background-color: lightgoldenrodyellow;
+
+    height: 100%;
+    padding: 20px 20px;
+    
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 25px;
+}
+
+.close-btn{
+    flex: 1;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+    background-color: rgb(141, 238, 188);
+}
+
+.close-btn:hover{
+    background-color: rgb(42, 168, 65);
+    text-shadow: 1px 1px 1px black;
+}
+
+.btnholder{
+    flex: 1;
+    display: flex;
+    background-color: whitesmoke;
+}
+
+.btnholder button:hover{
+    text-shadow: 1px 1px 1px black;
+}
+
+.btnholder button{
+    flex: 1;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+    background-color: whitesmoke(37, 187, 206);
+    
+}
+
+.cardholder{
+    display: flex;
+    height: 100px;
+    border: 1px solid black;
+    
+}
+
+.cardholder div{
+    flex: 1;
+    display: flex;
+    background-color: whitesmoke;
+    
+}
+
+.cardholder .information-div{
+    flex: 20;
+    display: flex;
+    background-color: whitesmoke;
+    
+}
+
+.information-div div{
+    flex: 1;    
+}
+
+textarea{
+    padding: 10px;
+}
+
+.vod-tracker{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid black;
+}
+
+.vod-tracker .heading-vod{
+    flex: 1;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.heading-vod h1{
+    font-size: 20px;
+    margin: 0 auto;
+    border-bottom: 2px solid black;
+}
+
+.vod-tracker .content-vod{
+    flex: 15;
+}
+
+.vod-tracker div textarea{
+    border: none;
+    background-color: whitesmoke;
+    text-wrap: wrap;
+    width: 100%;
+    vertical-align: top; /* Align text to the top */
+    box-sizing: border-box; 
+}
+
+.notes-div{
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid black;
+}
+
+.previous-notes{
+    border-top: 1px solid black;
+}
+
+.current-notes{
+    border-bottom: 1px solid black;
+}
+
+.notes-div div{
+    display: flex;
+    flex-direction: column;
+}
+
+.current-notes .heading-current{
+    flex: 1;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.heading-current h1{
+    font-size: 20px;
+    margin: 0 auto;
+    border-bottom: 2px solid black;
+}
+
+.current-notes .content-current{
+    flex: 15;
+    display: flex;
+}
+
+.current-notes .content-current textarea{
+    flex: 1;
+}
+
+.notes-div div div textarea{
+    border: none;
+    background-color: whitesmoke;
+    text-wrap: wrap;
+    width: 100%;
+    vertical-align: top; /* Align text to the top */
+    box-sizing: border-box; /* Ensure padding doesn't affect the overall size */
+}
+
+/* the bullshit begins*/
+
+.previous-notes .heading-previous{
+    flex: 1;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.heading-previous h1{
+    font-size: 20px;
+    margin: 0 auto;
+    border-bottom: 2px solid black;
+}
+
+.previous-notes .content-previous{
+    flex: 15;
+    display: flex;
+}
+
+.previous-notes .content-previous textarea{
+    flex: 1;
+}
+
+textarea:focus{
+    outline: none;
+}
