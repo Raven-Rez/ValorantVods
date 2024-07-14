@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(){
         cardBtn.classList.add("card");
         cardBtn.id = `${index}`;
         
-        cardBtn.textContent = "bAtch NuMber, current NuMber";
+        cardBtn.textContent = `Session-${index+1}, Current RaNk`;
 
         btnHolderDiv.append(cardBtn);
         cardHolderDiv.append(btnHolderDiv);
@@ -53,9 +53,8 @@ addBatchBtn.addEventListener("click", function(){
     cardBtn.id = `${countCard}`;
     countCard++;
     localStorage.setItem('countCard', countCard);
-    cardBtn.textContent = "bAtch NuMber, current NuMber";
-
-    btnHolderDiv.append(cardBtn);
+    cardBtn.textContent = `Session-${countCard}, Current RaNk`;
+    btnHolderDiv.append(cardBtn);   
     cardHolderDiv.append(btnHolderDiv);
     displayerEl.append(cardHolderDiv);
 
@@ -64,14 +63,8 @@ addBatchBtn.addEventListener("click", function(){
 })
 
 removeBatchBtn.addEventListener("click", function(){
-    // const storedVodTrackerArray = JSON.parse(localStorage.getItem("vodTrackerArray")) || [];
-    // const storedCurrentNotesArray = JSON.parse(localStorage.getItem('currentNotesArray')) || [];
-    // const storedPreviousNotesArray = JSON.parse(localStorage.getItem('previousNotesArray')) || [];
 
-    // const storedArrays = [storedVodTrackerArray, storedCurrentNotesArray, storedPreviousNotesArray];
-
-    // storedArrays.forEach
-    countCard--;
+    if(countCard>0) countCard--;
     localStorage.setItem('countCard', countCard);
     vodTrackerArray.pop();
     currentNotesArray.pop();
@@ -82,10 +75,7 @@ removeBatchBtn.addEventListener("click", function(){
     localStorage.setItem('vodTrackerArray', JSON.stringify(vodTrackerArray));
     localStorage.setItem('currentNotesArray', JSON.stringify(currentNotesArray));
     localStorage.setItem('previousNotesArray', JSON.stringify(previousNotesArray))
-
-
-
-})
+});
 function renderCard(){
     displayerItems.forEach((btn) => {
         btn.addEventListener("click", function(){
