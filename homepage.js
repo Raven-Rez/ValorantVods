@@ -53,7 +53,7 @@ addBatchBtn.addEventListener("click", function(){
     cardBtn.id = `${countCard}`;
     countCard++;
     localStorage.setItem('countCard', countCard);
-    cardBtn.textContent = `Session-${countCard}, Current RaNk`;
+    cardBtn.textContent = `Session-${countCard}`;
     btnHolderDiv.append(cardBtn);   
     cardHolderDiv.append(btnHolderDiv);
     displayerEl.append(cardHolderDiv);
